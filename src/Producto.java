@@ -1,9 +1,9 @@
 public class Producto {
     private String nombre;
-    private String precio;
-    private String cantidad;
+    private int precio;
+    private int cantidad;
     
-    public Producto(String nombre, String precio, String cantidad) {
+    public Producto(String nombre, int precio, int cantidad) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -17,19 +17,19 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 
-    public String getCantidad() {
+    public int getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(String cantidad) {
+    public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 

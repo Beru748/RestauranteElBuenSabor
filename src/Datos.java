@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author alfre
@@ -13,15 +16,45 @@ public class Datos {
     public final static String DIRECCION = "Calle 15 #8-32, Valledupar";
     public final static String NIT = "NIT: 900.123.456-7";
 
-    
-    public static String[] nombresPlatos = { "Bandeja Paisa", "Sancocho de Gallina", "Arepa con Huevo", "Jugo Natural", "Gaseosa",
-            "Cerveza Poker", "Agua Panela", "Arroz con Pollo" };
-    public static double[] p = { 32000, 28000, 8000, 7000, 4500, 6000, 3500, 25000 };
-    public static int[] cant = { 0, 0, 0, 0, 0, 0, 0, 0 };
-    public static int ms = 0;
-    public static int est = 0;
-    public static double tot = 0;
-    public static int nf = 1;
-    public static String x = "El Buen Sabor";
-    public static String tmp = "";
+    private static List<Producto> menu = new ArrayList<>();
+
+    public static int numeroMesa = 0;
+    public static int estadoMesa = 0;
+    public static double totalVenta = 0;
+    public static int proximoNumeroFactura = 1;
+
+    static {
+        menu.add(new Producto("Bandeja Paisa", 32000, 0));
+        menu.add(new Producto("Sancocho de Gallina", 28000, 0));
+        menu.add(new Producto("Arepa con Huevo", 8000, 0));
+        menu.add(new Producto("Jugo Natural", 7000, 0));
+        menu.add(new Producto("Gaseosa", 4500, 0));
+        menu.add(new Producto("Cervesa Poker", 6000, 0));
+        menu.add(new Producto("Agua Panela", 3500, 0));
+        menu.add(new Producto("Arroz con Pollo", 25000, 0));
+    }
+
+    public static List<Producto> getMenu() {
+        return menu;
+    }
+
+    public static int getNumeroMesa() {
+        return numeroMesa;
+    }
+
+    public static void setNumeroMesa(int mesa) {
+        numeroMesa = mesa;
+    }
+
+    public static int getEstadoMesa() {
+        return estadoMesa;
+    }
+
+    public static void setEstadoMesa(int estado) {
+        estadoMesa = estado;
+    }
+
+    public static int generarNumeroFactura() {
+        return proximoNumeroFactura++;
+    }
 }
