@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.List;
+
 /**
  *
  * @author alfre
@@ -27,21 +29,18 @@ public class Utilidades {
         return total;
     }
 
-    public static boolean validar() {
-        int cont = 0;
-        int i = 0;
-        while (i < Datos.cant.length) {
-            if (Datos.cant[i] > 0) {
-                cont = cont + 1;
-            }
-            i++;
-        } // fin while
-        // reinicia si no hay nada - efecto secundario no documentado
-        if (cont == 0) {
-            Datos.tot = 0;
-            Datos.tmp = "";
+    public static boolean validar(List<Producto> pedido) {
+
+        if (pedido == null || pedido.isEmpty()) {
+            return false;
         }
-        return cont > 0;
+        for (Producto p : pedido) {
+            if (p.getCantidad() > 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void reiniciar() {
