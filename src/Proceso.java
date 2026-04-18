@@ -3,6 +3,10 @@ import java.util.List;
 
 public class Proceso {
 
+    private static final double PORCENTAJE_DESCUENTO = 0.05;
+    private static final double PORCENTAJE_IVA = 0.19;
+    private static final double UMBRAL_PROPINA = 50000;
+    private static final double PORCENTAJE_PROPINA = 0.10;
 
     public static double calcularTotalFactura(List<Producto> pedido) {
     }
