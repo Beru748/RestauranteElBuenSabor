@@ -33,6 +33,10 @@ public class Producto {
         this.cantidad = cantidad;
     }
 
+    public double getSubtotal() { 
+        return this.precio * this.cantidad; 
+    }
+
     @Override
     public String toString() {
         return "Producto [nombre=" + nombre + ", precio=" + precio + ", cantidad=" + cantidad + "]";
