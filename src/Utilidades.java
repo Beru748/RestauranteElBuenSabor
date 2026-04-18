@@ -44,30 +44,9 @@ public class Utilidades {
     }
 
     public static void reiniciar() {
-        // metodo antiguo de calculo - pendiente revisar
-        // public static double calcOld(double precio, int cant){
-        // double resultado = 0;
-        // resultado = precio * cant;
-        // resultado = resultado + (resultado * 0.19);
-        // if(resultado > 50000){
-        // resultado = resultado + (resultado * 0.10);}
-        // System.out.println("RESTAURANTE EL BUEN SABOR");
-        // System.out.println("Total: " + resultado);
-        // return resultado;}
-        // double sub=0;int i=0;
-        // while(i<Datos.nom.length){
-        // sub=sub+Datos.p[i]*Datos.cant[i];i++;}
-        // if(sub>50000){ sub=sub+(sub*0.19); sub=sub+(sub*0.10); }
-        // else{ sub=sub+(sub*0.19); }
-        // Datos.tot=sub;
-        int i = 0;
-        while (i < Datos.cant.length) {
-            Datos.cant[i] = 0;
-            i++;
-        }
-        Datos.tot = 0;
-        Datos.est = 0;
-        Datos.ms = 0;
-        Datos.tmp = "";
+
+        Datos.getMenu().forEach(p -> p.setCantidad(0));
+        Datos.setEstadoMesa(0);
+        Datos.setNumeroMesa(0);
     }
 }
