@@ -1,12 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- *
- * @author alfre
- */
 public class Proceso {
     public static double hacerTodo() {
         double sub = 0;
@@ -15,7 +9,8 @@ public class Proceso {
         double aux = 0;
         int cont = 0;
         int i = 0;
-        while (i < Datos.nom.length) {
+        
+        while (i < Datos.getMenu().size()) {
             if (Datos.cant[i] > 0) {
                 // multiplica precio por cantidad
                 sub = sub + Datos.p[i] * Datos.cant[i];
