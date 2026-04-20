@@ -34,29 +34,24 @@ public class Proceso {
         return totalFinal;
     }
 
-    public static double procesar(double a, double b, double c, double d, double e, int f, boolean g) {
-        double res = 0;
-        double iva = 0;
-        double prop = 0;
-        double tmp = 0;
-        // calcula subtotal con cantidad
-        res = a * b;
-        if (c > 0) {
-            // aplica descuento
-            res = res - (res * c);
+    public static double procesar(double precioBase, double cantidad, double descuento, 
+                double iva, double propina, int cantProductos, boolean aplicaPropina) {
+        double total = precioBase * cantidad;
+        
+        if (descuento > 0) {
+            total -= (total * descuento);
         }
-        // calcula iva
-        iva = res * d;
-        tmp = iva;
-        res = res + tmp;
-        if (g) {
-            // aplica propina si corresponde
-            prop = res * e;
-            res = res + prop;
+        
+        total += (total * iva);
+        
+        if (aplicaPropina) {
+            total += (total * propina);
         }
-        if (f > 3) {
-            res = res - (res * 0.01);
+        
+        if (cantProductos > MIN_PRODUCTOS_DESCUENTO) {
+            total -= (total * 0.01);
         }
-        return res;
+        
+        return total;
     }
 }

@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Imprimir {
 
     public static void mostrarCarta() {
@@ -5,11 +8,12 @@ public class Imprimir {
         System.out.println("    RESTAURANTE EL BUEN SABOR");
         System.out.println("    --- NUESTRA CARTA ---");
         System.out.println("========================================");
-        int i = 0;
-        while (i < Datos.nombresPlatos.length) {
-            System.out.printf("%d. %-22s $%,.0f%n", (i + 1), Datos.nombresPlatos[i], Datos.p[i]);
-            i++;
-        } // fin while
+
+        List <Producto> menu = new ArrayList<>();
+        
+        for (Producto m : menu) {
+            System.out.println(m);
+        }
         System.out.println("========================================");
     }
 

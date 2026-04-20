@@ -37,6 +37,10 @@ public class Producto {
         return this.precio * this.cantidad; 
     }
 
+    public void agregarCantidad(int c){
+        this.cantidad += c;
+    }
+
     @Override
     public String toString() {
         return "Producto [nombre=" + nombre + ", precio=" + precio + ", cantidad=" + cantidad + "]";
