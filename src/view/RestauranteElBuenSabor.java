@@ -1,4 +1,10 @@
+package view;
 import java.util.Scanner;
+
+import dominio.Pedido;
+import dominio.Producto;
+import persistencia.Datos;
+
 import java.util.List;
 
 public class RestauranteElBuenSabor {

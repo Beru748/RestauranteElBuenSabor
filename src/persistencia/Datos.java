@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+package persistencia;
 
 import java.util.ArrayList;
 import java.util.List;
+import dominio.Producto;
 
-/**
- *
- * @author alfre
- */
 public class Datos {
 
     public final static String NOMBRE_RESTAURANTE = "RESTAURANTE EL BUEN SABOR";

@@ -1,4 +1,9 @@
+package view;
 import java.util.List;
+
+import dominio.Pedido;
+import dominio.Producto;
+import persistencia.Datos;
 
 public class Imprimir {
 
